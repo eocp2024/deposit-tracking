@@ -10,7 +10,8 @@ app.secret_key = "your_secret_key"  # Needed for flashing messages
 
 # Google Sheets Setup
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("C:\\Users\\gutta\\Desktop\\Python Script\\deposittracking-c75aa9c780f4.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("/etc/secrets/deposittracking-c75aa9c780f4.json", scope)
+
 client = gspread.authorize(creds)
 sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1BWROL9J53G4wSou5KpwI1rgXymNe31F-zDm_iXjBcok/edit#gid=0").sheet1
 

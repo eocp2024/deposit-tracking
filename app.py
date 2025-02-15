@@ -68,7 +68,7 @@ def confirmation():
 
 # Google Sheets Conditional Formatting
 def apply_conditional_formatting():
-    credentials = Credentials.from_service_account_file("/etc/secrets/deposittracking.json")
+    credentials = Credentials.from_service_account_file("/etc/secrets/deposittracking-c75aa9c780f4.json")
 
     service = build('sheets', 'v4', credentials=credentials)
 
